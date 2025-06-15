@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lihat Semua Pinjaman - BuyPay Admin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body { background-color: #f8f9fa; font-family: 'Segoe UI', sans-serif; }
+    .sidebar { background-color: #007bff; min-height: 100vh; color: white; }
+    .sidebar a { display: block; padding: 10px 15px; color: white; text-decoration: none; }
+    .sidebar a:hover { background-color: #0056b3; }
+    .card-custom { border-radius: 16px; box-shadow: 0 0 12px rgba(0, 0, 0, 0.1); }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar Admin -->
+    <div class="col-md-2 sidebar p-3">
+      <h4 class="text-white">BuyPay Admin</h4>
+      <a href="admin.html">🏠 Dashboard</a>
+      <a href="verifikasi.html">📋 Verifikasi</a>
+      <a href="pinjaman.html">🧾 Lihat Pinjaman</a>
+      <a href="monitoring.html">👤 Monitoring</a>
+      <a href="contact.html">📧 Kontak Customer</a>
+      <a href="#" onclick="logout()">🚪 Logout</a>
+    </div>
+
+    <!-- Konten Utama -->
+    <div class="col-md-10 p-4">
+      <h2>Semua Pinjaman Customer</h2>
+      <div class="card card-custom p-4">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Nama Customer</th>
+              <th>Jumlah</th>
+              <th>Tenor</th>
+              <th>Status</th>
+              <th>Mulai</th>
+              <th>Jatuh Tempo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Rina Marlina</td>
+              <td>Rp 3.000.000</td>
+              <td>3 Bulan</td>
+              <td><span class="badge bg-success">Aktif</span></td>
+              <td>2025-06-01</td>
+              <td>2025-09-01</td>
+            </tr>
+            <tr>
+              <td>Rudi Hartono</td>
+              <td>Rp 5.000.000</td>
+              <td>6 Bulan</td>
+              <td><span class="badge bg-danger">Menunggak</span></td>
+              <td>2025-05-01</td>
+              <td>2025-11-01</td>
+            </tr>
+            <tr>
+              <td>Siti Aminah</td>
+              <td>Rp 2.000.000</td>
+              <td>1 Bulan</td>
+              <td><span class="badge bg-secondary">Lunas</span></td>
+              <td>2025-04-01</td>
+              <td>2025-05-01</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function logout() {
+    localStorage.clear();
+    window.location.href = "../index.html";
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

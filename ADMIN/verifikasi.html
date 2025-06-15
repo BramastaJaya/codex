@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Verifikasi Pinjaman - BuyPay Admin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body { background-color: #f8f9fa; font-family: 'Segoe UI', sans-serif; }
+    .sidebar { background-color: #007bff; min-height: 100vh; color: white; }
+    .sidebar a { display: block; padding: 10px 15px; color: white; text-decoration: none; }
+    .sidebar a:hover { background-color: #0056b3; }
+    .card-custom { border-radius: 16px; box-shadow: 0 0 12px rgba(0, 0, 0, 0.1); }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-md-2 sidebar p-3">
+      <h4 class="text-white">BuyPay Admin</h4>
+      <a href="admin.html">🏠 Dashboard</a>
+      <a href="verifikasi.html">📋 Verifikasi</a>
+      <a href="pinjaman.html">🧾 Lihat Pinjaman</a>
+      <a href="monitoring.html">👤 Monitoring</a>
+      <a href="contact.html">📧 Kontak Customer</a>
+      <a href="#" onclick="logout()">🚪 Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="col-md-10 p-4">
+      <h2>Verifikasi Pengajuan Pinjaman</h2>
+      <div class="card card-custom p-4 mt-3">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Nama Customer</th>
+              <th>Jumlah</th>
+              <th>Tenor</th>
+              <th>Tanggal Pengajuan</th>
+              <th>Status</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Rina Marlina</td>
+              <td>Rp 3.000.000</td>
+              <td>3 Bulan</td>
+              <td>2025-06-01</td>
+              <td><span class="badge bg-warning text-dark">Menunggu</span></td>
+              <td>
+                <button class="btn btn-success btn-sm">✔ Terima</button>
+                <button class="btn btn-danger btn-sm">✖ Tolak</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Rudi Hartono</td>
+              <td>Rp 5.000.000</td>
+              <td>6 Bulan</td>
+              <td>2025-06-02</td>
+              <td><span class="badge bg-warning text-dark">Menunggu</span></td>
+              <td>
+                <button class="btn btn-success btn-sm">✔ Terima</button>
+                <button class="btn btn-danger btn-sm">✖ Tolak</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
